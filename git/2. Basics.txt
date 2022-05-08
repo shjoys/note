@@ -1,0 +1,95 @@
+https://www.youtube.com/watch?v=Z9dvM7qgN9s&t=38s
+    >> 16:30 ~
+
+1. Workflow
+- local                                                     - remote (github)
+    woking directory  >  staging area  >  .git directory  >>>  .git directory
+                                    (commit)             (push)
+                                              |                       |
+                                              |   (pull) <------------|
+                                              |
+        (checkout) <--------------------------|
+
+
+2. file status
+
+untracked  vs  tracked
+                  |
+      unmodified vs modified
+                       |
+                       |---->
+                (only can be on staging area)
+
+- command : 
+        git status
+            >> untracked files :
+                (use "git add <file>..." to include in what will be committed)
+                    a.txt, b.txt, c.txt ...
+                    nothing added to commit but untracked files present (use "git add" to track)
+
+        git add a.txt  (on staging)
+        git status
+            >> Changes to be committed:
+                (use "git rm --cached <file>..." to unstage)
+                     new file:   a.txt
+                
+               Untracked files:
+                (use "git add <file>..." to include in what will be committed)
+                    b.txt, c.txt ...
+
+        git add *.txt  (on staging)
+        git status
+            >> Changes to be committed:
+                (use "git rm --cached <file>..." to unstage)
+                     new file:   a.txt, b.txt, c.txt
+        
+        echo change text >> a.txt  (modified)
+        git status
+            >> Changes to be committed:
+                (use "git rm --cached <file>..." to unstage)
+                        new file:   a.txt
+                        new file:   b.txt
+                        new file:   c.txt
+
+               Changes not staged for commit:
+                (use "git add <file>..." to update what will be committed)
+                (use "git restore <file>..." to discard changes in working directory)
+                        modified:   a.txt
+
+        
+        git add a.txt  (on staging)
+        git status
+            >> Changes to be committed:
+                (use "git rm --cached <file>..." to unstage)
+                        new file:   a.txt
+                        new file:   b.txt
+                        new file:   c.txt
+
+        git rm --cached *  (be on untracked)
+        git status
+            >> Untracked files:
+                (use "git add <file>..." to include in what will be committed)
+                        a.txt
+                        b.txt
+                        c.txt
+
+
+3. git ignore
+
+    echo *.log > .gitignore             : ignore file ext
+    echo build/ > .gitignore            : ingnore path
+    echo build/.log > .gitignore        : ignore file ext in path
+
+
+4. check changes
+
+    git status     : detail
+
+    git stauts -s  : shorts
+
+    git diff
+        >> show detail diff
+
+    cat a.txt      : show file contents
+
+    

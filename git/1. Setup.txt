@@ -1,0 +1,21 @@
+https://www.youtube.com/watch?v=Z9dvM7qgN9s&t=38s
+    >> 00:00 ~ 16:30
+https://git-scm.com/docs
+
+1. git init : initailize empty Git repository
+
+2. rm -rf.git : remove git
+
+3. git branch -m {name} : make brach
+
+4. git status : check status
+
+5. git config --global alias.{alias} {command} : make alias
+    >> git config --global alias.st status
+    >> git st
+
+6. git config --h : command list 
+    >> error: unknown option `h' ???? 
+    
+    
+
