@@ -4,7 +4,7 @@ https://git-scm.com/docs
 
 1. git init : initailize empty Git repository
 
-2. rm -rf.git : remove git
+2. rm -rf .git : remove git
 
 3. git branch -m {name} : make brach
 
@@ -14,8 +14,8 @@ https://git-scm.com/docs
     >> git config --global alias.st status
     >> git st
 
-6. git config --h : command list 
-    >> error: unknown option `h' ???? 
-    
-    
+6. git config --h : command list
+    >> error: unknown option `h' ????
+
+
 
