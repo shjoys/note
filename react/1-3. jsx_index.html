@@ -14,11 +14,13 @@
 <!-- type : text/babel -->
 <script type="text/babel">
     const root = document.getElementById('root');
-    const Title = () => (
-        <h3 id="sexy-span">
-            Hello
-        </h3>
-    );
+    function Title() {
+        return (
+            <h3 id="sexy-span">
+                Hello
+            </h3>
+        )
+    };
     const Button = () => (
         <button
             id="sexy-btn"
@@ -26,14 +28,14 @@
             Click me
         </button>
     );
-    const Container = (
+    const Container = () => (
         // 컴포넌트의 첫글자는 무조건 대문자여야함 : HTML 태그와 구분하기 위한 룰
         <div>
             <Title/>
             <Button/>
         </div>
     );
-    ReactDOM.render(Container, root);
+    ReactDOM.render(<Container/>, root);
 
     /**
      *  React JSX
