@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Playground</title>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+<!-- JSX 를 브라우저가 이해할수 있도록 도와줌 -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- type : text/babel -->
+<script type="text/babel">
+    const root = document.getElementById('root');
+    const Title = () => (
+        <h3 id="sexy-span">
+            Hello
+        </h3>
+    );
+    const Button = () => (
+        <button
+            id="sexy-btn"
+            onClick={() => console.log("clicked!!")}>
+            Click me
+        </button>
+    );
+    const Container = (
+        // 컴포넌트의 첫글자는 무조건 대문자여야함 : HTML 태그와 구분하기 위한 룰
+        <div>
+            <Title/>
+            <Button/>
+        </div>
+    );
+    ReactDOM.render(Container, root);
+
+    /**
+     *  React JSX
+     *
+     * **/
+</script>
+
+</html>

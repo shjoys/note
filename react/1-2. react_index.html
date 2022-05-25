@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Playground</title>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<!--React : interactive UI engine -->
+<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<!--React DOM : 모든 React element들을 HTML 로 바꿔주는 package library -->
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+<script type="text/javascript">
+    const root = document.getElementById('root');
+    const h3 = React.createElement(
+        'h3',             // element tag
+        {id: 'sexy-span'},  // attributes
+        'Hello'             // innerHtml
+    );
+    const btn = React.createElement(
+        'button',
+        {
+            id: 'sexy-btn',     // id : html 에 보여야 하는 attributes
+            onClick: () => console.log('clicked!!'),    // event listener : html 에 보이지 않는 attributes
+        },
+        'Click me');
+    const container = React.createElement('div', null, [h3, btn]);
+    ReactDOM.render(container, root);
+
+    /**
+     *  React JS
+     *  Javascript 으로 시작해서 HTML이 됨 -> HTML을 업데이트
+     *  id 만들 필요 없고, getElementById / querySelector 로 찾을 필요 없음
+     * **/
+</script>
+
+</html>
